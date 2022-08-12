@@ -12,23 +12,21 @@ function activate(context) {
 
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "window-zoom-to-specific-value" is now active!');
+	console.log('window-zoom-to-specific-value is now active!');
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('window-zoom-to-specific-value.helloWorld', function () {
-		// The code you place here will be executed every time your command is executed
-
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from window zoom to specific value!');
+	const zoom = vscode.commands.registerCommand('window-zoom-to-specific-value.resetZoomLevel', () => {
+		const zoomLEvel = vscode.workspace.getConfiguration('').get('window-zoom-to-specific-value.zoomLevel');
+		vscode.workspace.getConfiguration('').update('window.zoomLevel', parseFloat(zoomLEvel.toFixed(2)), true)
 	});
 
-	context.subscriptions.push(disposable);
+	context.subscriptions.push(zoom);
 }
 
 // this method is called when your extension is deactivated
-function deactivate() {}
+function deactivate() { }
 
 module.exports = {
 	activate,
