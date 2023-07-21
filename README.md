@@ -6,6 +6,11 @@ This extension allows you to set window zoom level to any value you want and add
 
 set `window-zoom-to-specific-value.zoomLevel` to specific value you want to use when resetting window zoom level
 
+## How to install
+- `npm install -g @vscode/vsce`
+- `vsce package`
+- from extensions tab click on 3dots and 'install from VSIX' and choose the generated `window-zoom-to-specific-value-1.0.0.vsix` file
+
 ## Release Notes
 ### 1.0.0
 
