@@ -18,8 +18,8 @@ function activate(context) {
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
 	const zoom = vscode.commands.registerCommand('window-zoom-to-specific-value.resetZoomLevel', () => {
-		const zoomLEvel = vscode.workspace.getConfiguration('').get('window-zoom-to-specific-value.zoomLevel');
-		vscode.workspace.getConfiguration('').update('window.zoomLevel', parseFloat(zoomLEvel.toFixed(2)), true)
+		const zoomLevel = vscode.workspace.getConfiguration('').get('window-zoom-to-specific-value.zoomLevel');
+		vscode.workspace.getConfiguration('').update('window.zoomLevel', parseFloat(zoomLevel.toFixed(2)), true)
 	});
 
 	context.subscriptions.push(zoom);
