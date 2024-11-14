@@ -1,32 +1,43 @@
-# README
+# Window Zoom Level Controller
 
-This extension allows you to set window zoom level to any value you want and adds a command `Reset Window Zoom Level` which you can assign a shortcut to. It is most useful when you want your window to be scaled by default to a value between 0 and 1 and have a hotkey to do that quickly after zooming in for, say, presentation purposes. Currently VS Code allows to set `window.zoomLevel` to any value in the settings, however, there is no way to make `cmd+0` hotkey set the level to the one you've specified as a default zoom level - it always sets it to 0.
+This VS Code extension allows you to customize your window zoom level and provides a `Reset Window Zoom Level` command with configurable shortcuts. It solves the limitation where standard `View: Reset Zoom` always resets to `0` regardless of your preferred zoom level.
 
-## Extension Settings
+## Features
 
-set `window-zoom-to-specific-value.zoomLevel` to specific value you want to use when resetting window zoom level
+- Set custom default zoom level
+- Reset to your preferred zoom level with a customizable shortcut
+- Perfect for presentations where you might need to zoom in and then reset it to your preferred level
 
-## How to install
-- `npm install -g @vscode/vsce`
-- `vsce package`
-- from extensions tab click on 3dots and 'install from VSIX' and choose the generated `window-zoom-to-specific-value-1.0.0.vsix` file
+## Installation
+
+1. Install vsce: `npm install -g @vscode/vsce`
+2. Clone and package: `vsce package`
+3. In VS Code, open Command Palette (Cmd+Shift+P / Ctrl+Shift+P)
+4. Select "Install from VSIX" and choose `window-zoom-to-specific-value-X.X.X.vsix`
+
+## Configuration
+
+In VS Code settings:
+
+- Set `window-zoom-to-specific-value.zoomLevel` to your preferred zoom level in the `settings.json` file
+- Optionally - assign a new keyboard shortcut to the `Reset Window Zoom Level` command instead of the default `Cmd+9` / `Ctrl+9`
 
 ## Release Notes
+
 ### 1.0.0
 
-Initial release 
+- Initial release
+- Custom zoom level support
+- Reset command implementation
 
-## Working with Markdown
+### 1.0.1
 
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+- Added keyboard shortcut configuration and updated README with installation instructions
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
+## Contributing
 
-## For more information
+Issues and pull requests are welcome on [GitHub]
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## License
 
-**Enjoy!**
+[Add your license here]

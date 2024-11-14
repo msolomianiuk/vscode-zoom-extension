@@ -2,32 +2,29 @@
   "name": "window-zoom-to-specific-value",
   "displayName": "window zoom to specific value",
   "description": "adds the ability to set window.zoom_level to specific value like 0.2, not just 0 or increments",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/msolomianiuk/vscode-zoom-extension"
   },
   "engines": {
-    "vscode": "^1.70.0"
+    "vscode": "^1.75.0"
   },
   "categories": [
     "Other"
-  ],
-  "activationEvents": [
-    "onCommand:window-zoom-to-specific-value.resetZoomLevel"
   ],
   "main": "./extension.js",
   "contributes": {
     "keybindings": [
       {
-        "command": "window-zoom-to-specific-value.resetZoomLevel",
-        "key": "ctrl+7",
-        "mac": "cmd+7"
+        "command": "window-zoom-to-specific-value.resetZoom",
+        "key": "ctrl+9",
+        "mac": "cmd+9"
       }
     ],
     "commands": [
       {
-        "command": "window-zoom-to-specific-value.resetZoomLevel",
+        "command": "window-zoom-to-specific-value.resetZoom",
         "title": "Reset Window Zoom Level"
       }
     ],
