@@ -1,3 +1,5 @@
+# DEPRECATED: starting from VS Code version 1.100.0, the default behavior of `View: Reset Zoom`(workbench.action.zoomReset) command has been changed to reset to the last used zoom level, which is set as "window.zoomLevel" in settings.json, making this extension obsolete.
+
 # Window Zoom Level Controller
 
 This VS Code extension allows you to customize your window zoom level and provides a `Reset Window Zoom Level` command with configurable shortcuts. It solves the limitation where standard `View: Reset Zoom` always resets to `0` regardless of your preferred zoom level.
